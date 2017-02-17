@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProtocolVC" customModule="GCPassValueDemo" customModuleProvider="target">
             <connections>
+                <outlet property="showLabel" destination="zI7-te-bqv" id="m1r-1A-bUw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dz-CS-47u">
+                    <rect key="frame" x="135" y="531" width="104" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="VxT-Up-cr5"/>
+                    </constraints>
+                    <state key="normal" title="Skip Next Page">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="iYP-5t-1sr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="showLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI7-te-bqv">
+                    <rect key="frame" x="16" y="126" width="343" height="54"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="1qn-aw-wlM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="0.66666666669999997" green="0.2057462971" blue="0.76755022319999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0dz-CS-47u" secondAttribute="trailing" constant="136" id="2aN-ro-TQI"/>
+                <constraint firstItem="zI7-te-bqv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Lol-Vg-tMq"/>
+                <constraint firstAttribute="trailing" secondItem="zI7-te-bqv" secondAttribute="trailing" constant="16" id="MXx-vH-Q5u"/>
+                <constraint firstAttribute="bottom" secondItem="0dz-CS-47u" secondAttribute="bottom" constant="106" id="Wma-nk-e0P"/>
+                <constraint firstItem="zI7-te-bqv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="126" id="Y1o-ja-zpK"/>
+                <constraint firstItem="0dz-CS-47u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="135" id="c3p-Kh-eLI"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
 </document>

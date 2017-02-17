@@ -10,12 +10,17 @@ import UIKit
 
 class ProtocolVC: UIViewController {
 
+    @IBOutlet weak var showLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func nextAction(_ sender: UIButton) {
+        let protocolDetailVC = ProtocolDetailVC(nibName: "ProtocolDetailVC", bundle: nil)
+        self.navigationController?.pushViewController(protocolDetailVC, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

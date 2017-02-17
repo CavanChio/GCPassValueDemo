@@ -10,12 +10,18 @@ import UIKit
 
 class ProtocolDetailVC: UIViewController {
 
+    @IBOutlet weak var myTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func lastAction(_ sender: UIButton) {
+        
+        _ = self.navigationController?.popViewController(animated: true)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

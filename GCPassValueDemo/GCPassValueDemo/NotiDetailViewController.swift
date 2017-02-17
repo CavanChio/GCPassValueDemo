@@ -17,8 +17,12 @@ class NotiDetailViewController: UIViewController {
     }
 
     @IBAction func skipLast(_ sender: UIButton) {
+        //第二步: 发送通知
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Hello"), object: nil, userInfo: ["text": self.myTF.text!])
         _ = self.navigationController?.popViewController(animated: true)
     }
+    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
