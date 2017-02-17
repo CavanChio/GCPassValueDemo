@@ -45,6 +45,32 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let value = indexPath.row
+        switch value {
+        case 0:
+           let notiVC = NotiViewController(nibName: "NotiViewController", bundle: nil)
+            self.navigationController?.pushViewController(notiVC, animated: true)
+        case 1:
+            let protocolVC = ProtocolVC(nibName: "ProtocolVC", bundle: nil)
+            self.navigationController?.pushViewController(protocolVC, animated: true)
+        case 2:
+            let closureVC = ClosureVC(nibName: "ClosureVC", bundle: nil)
+            self.navigationController?.pushViewController(closureVC, animated: true)
+        case 3:
+            let instanceVC = InstanceVC(nibName: "InstanceVC", bundle: nil)
+            self.navigationController?.pushViewController(instanceVC, animated: true)
+        case 4:
+            let construcVC = ConstrucVC(nibName: "ConstrucVC", bundle: nil)
+            self.navigationController?.pushViewController(construcVC, animated: true)
+        case 5:
+            let propertyVC = PropertyVC(nibName: "PropertyVC", bundle: nil)
+            self.navigationController?.pushViewController(propertyVC, animated: true)
+        case 6:
+            let userVC = UserVC(nibName: "UserVC", bundle: nil)
+            self.navigationController?.pushViewController(userVC, animated: true)
+        default:
+            print("Error")
+        }
         
     }
     

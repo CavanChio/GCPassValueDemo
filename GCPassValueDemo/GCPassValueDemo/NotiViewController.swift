@@ -10,12 +10,20 @@ import UIKit
 
 class NotiViewController: UIViewController {
 
+    @IBOutlet weak var showLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func skipNext(_ sender: UIButton) {
+        let notiDetailVC = NotiDetailViewController(nibName: "NotiDetailViewController", bundle: nil)
+        self.navigationController?.pushViewController(notiDetailVC, animated: true)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
