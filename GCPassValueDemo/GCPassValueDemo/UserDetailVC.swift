@@ -10,12 +10,18 @@ import UIKit
 
 class UserDetailVC: UIViewController {
 
+    @IBOutlet weak var showLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let defaults = UserDefaults.standard
+        let values = defaults.value(forKey: "text")
+        self.showLabel.text = values as? String
     }
 
+    @IBAction func lastPage(_ sender: UIButton) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -10,12 +10,26 @@ import UIKit
 
 class UserVC: UIViewController {
 
+    @IBOutlet weak var myTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
 
+    @IBAction func nextPage(_ sender: UIButton) {
+        //获取default单例实例对象
+        let defaults = UserDefaults.standard
+        //设置
+        defaults.set(self.myTF.text, forKey: "text")
+        //同步数据
+        defaults.synchronize()
+        
+        let userDetailVC = UserDetailVC(nibName: "UserDetailVC", bundle: nil)
+        self.navigationController?.pushViewController(userDetailVC, animated: true)
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
