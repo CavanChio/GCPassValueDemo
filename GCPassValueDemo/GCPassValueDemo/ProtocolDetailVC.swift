@@ -8,8 +8,15 @@
 
 import UIKit
 
+//定义一个协议
+@objc protocol ProtocolDetailDelegate {
+    @objc optional func passValue(value: String)-> Void
+}
+
 class ProtocolDetailVC: UIViewController {
 
+    //声明协议属性
+    weak var delegate: ProtocolDetailDelegate?
     @IBOutlet weak var myTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +25,10 @@ class ProtocolDetailVC: UIViewController {
     }
 
     @IBAction func lastAction(_ sender: UIButton) {
+        //传值
+        if let delegate = self.delegate {
+            delegate.passValue!(value: self.myTF.text!)
+        }
         
         _ = self.navigationController?.popViewController(animated: true)
         

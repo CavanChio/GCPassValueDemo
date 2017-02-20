@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProtocolVC: UIViewController {
+class ProtocolVC: UIViewController, ProtocolDetailDelegate {
 
     @IBOutlet weak var showLabel: UILabel!
     override func viewDidLoad() {
@@ -18,7 +18,12 @@ class ProtocolVC: UIViewController {
 
     @IBAction func nextAction(_ sender: UIButton) {
         let protocolDetailVC = ProtocolDetailVC(nibName: "ProtocolDetailVC", bundle: nil)
+        protocolDetailVC.delegate = self
         self.navigationController?.pushViewController(protocolDetailVC, animated: true)
+    }
+    //实现传值方法
+    func passValue(value: String) {
+        self.showLabel.text = value
     }
     
     override func didReceiveMemoryWarning() {
