@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConstrucVC" customModule="GCPassValueDemo" customModuleProvider="target">
             <connections>
+                <outlet property="myTF" destination="k4n-tq-Ntw" id="XIA-5e-Udq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,38 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-tq-Ntw">
+                    <rect key="frame" x="16" y="75" width="343" height="57"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="FYY-4h-EIr"/>
+                    </constraints>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwY-vd-Adi">
+                    <rect key="frame" x="126" y="284" width="123" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="HXQ-T7-GLs"/>
+                    </constraints>
+                    <state key="normal" title="跳转到下一个页面"/>
+                    <connections>
+                        <action selector="SkipNext:" destination="-1" eventType="touchUpInside" id="qWk-9h-2Ol"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.66666666669999997" green="0.2057462971" blue="0.76755022319999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TwY-vd-Adi" firstAttribute="top" secondItem="k4n-tq-Ntw" secondAttribute="bottom" constant="152" id="Dj3-pG-90A"/>
+                <constraint firstItem="k4n-tq-Ntw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="GhS-yS-11q"/>
+                <constraint firstAttribute="trailing" secondItem="TwY-vd-Adi" secondAttribute="trailing" constant="126" id="H0P-ns-hdZ"/>
+                <constraint firstAttribute="trailing" secondItem="k4n-tq-Ntw" secondAttribute="trailing" constant="16" id="Pnl-dM-4uR"/>
+                <constraint firstItem="k4n-tq-Ntw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="aBB-zU-Lyz"/>
+                <constraint firstItem="TwY-vd-Adi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="126" id="bFO-Ms-NzD"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

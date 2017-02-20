@@ -10,12 +10,17 @@ import UIKit
 
 class ConstrucVC: UIViewController {
 
+    @IBOutlet weak var myTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func SkipNext(_ sender: UIButton) {
+        let vc = ConstrucDetailVC(text: self.myTF.text!)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
