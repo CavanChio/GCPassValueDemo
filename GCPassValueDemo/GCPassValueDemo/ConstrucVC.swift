@@ -18,7 +18,9 @@ class ConstrucVC: UIViewController {
     }
 
     @IBAction func SkipNext(_ sender: UIButton) {
-        let vc = ConstrucDetailVC(text: self.myTF.text!)
+        let vc = ConstrucDetailVC.init(text: self.myTF.text!)
+        
+//        let vc = ConstrucDetailVC(text: self.myTF.text!)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     override func didReceiveMemoryWarning() {
