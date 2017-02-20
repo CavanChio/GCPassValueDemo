@@ -10,12 +10,17 @@ import UIKit
 
 class InstanceDetailVC: UIViewController {
 
+    @IBOutlet weak var showlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let singleton = Singleton.shareInstance()
+        self.showlabel.text = singleton.text
     }
 
+    @IBAction func lastPage(_ sender: UIButton) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

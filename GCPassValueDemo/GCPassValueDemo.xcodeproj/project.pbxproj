@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		869B4D6E1E5A946900533F4F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B4D6D1E5A946900533F4F /* Singleton.swift */; };
 		86D9C2951E56E33200208D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D9C2941E56E33200208D1D /* AppDelegate.swift */; };
 		86D9C29A1E56E33200208D1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D9C2981E56E33200208D1D /* Main.storyboard */; };
 		86D9C29C1E56E33200208D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D9C29B1E56E33200208D1D /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		869B4D6D1E5A946900533F4F /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		86D9C2911E56E33200208D1D /* GCPassValueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCPassValueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D9C2941E56E33200208D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D9C2991E56E33200208D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				86D9C2E01E56ECC200208D1D /* InstanceVC.xib */,
 				86D9C2E31E56ECD200208D1D /* InstanceDetailVC.swift */,
 				86D9C2E41E56ECD200208D1D /* InstanceDetailVC.xib */,
+				869B4D6D1E5A946900533F4F /* Singleton.swift */,
 			);
 			name = "单例传值";
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				86D9C2F71E56ED5700208D1D /* PropertyDetailVC.swift in Sources */,
 				86D9C2D31E56EC5A00208D1D /* ProtocolDetailVC.swift in Sources */,
 				86D9C2EE1E56ED2000208D1D /* ConstrucDetailVC.swift in Sources */,
+				869B4D6E1E5A946900533F4F /* Singleton.swift in Sources */,
 				86D9C2EA1E56ED0F00208D1D /* ConstrucVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +680,7 @@
 				86D9C2BB1E56E33200208D1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86D9C2BC1E56E33200208D1D /* Build configuration list for PBXNativeTarget "GCPassValueDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -684,6 +689,7 @@
 				86D9C2BE1E56E33200208D1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86D9C2BF1E56E33200208D1D /* Build configuration list for PBXNativeTarget "GCPassValueDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -692,6 +698,7 @@
 				86D9C2C11E56E33200208D1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

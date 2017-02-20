@@ -17,7 +17,7 @@ class ClosureVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func skipButton(_ sender: UIButton) {
-        let closureVC = ClosureDetailVC()
+        let closureVC = ClosureDetailVC(nibName: "ClosureDetailVC", bundle: nil)
         closureVC.callBack{(value: String?) -> Void in
             self.showLabel.text = value
         }

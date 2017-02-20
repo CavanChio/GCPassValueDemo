@@ -9,6 +9,7 @@
 import UIKit
 
 class InstanceVC: UIViewController {
+    @IBOutlet weak var myTF: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,14 @@ class InstanceVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func nextPage(_ sender: UIButton) {
+        let instanceVC = InstanceDetailVC(nibName: "InstanceDetailVC", bundle: nil)
+        let singleton = Singleton.shareInstance()
+        singleton.text = self.myTF.text
+        
+        self.navigationController?.pushViewController(instanceVC, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
