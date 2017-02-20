@@ -29,12 +29,10 @@ class ClosureDetailVC: UIViewController {
     }
     
     @IBAction func lastPage(_ sender: UIButton) {
-        
         //可选绑定
         if let closure = self.closure {
             closure(self.myTF.text)
         }
-        
         _ = self.navigationController?.popViewController(animated: true)
     }
     override func didReceiveMemoryWarning() {
