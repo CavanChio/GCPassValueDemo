@@ -63,8 +63,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let construcVC = ConstrucVC(nibName: "ConstrucVC", bundle: nil)
             self.navigationController?.pushViewController(construcVC, animated: true)
         case 5:
-            let propertyVC = PropertyVC(nibName: "PropertyVC", bundle: nil)
-            self.navigationController?.pushViewController(propertyVC, animated: true)
+            let propertyDetailVC = PropertyDetailVC(nibName: "PropertyDetailVC", bundle: nil)
+            self.navigationController?.pushViewController(propertyDetailVC, animated: true)
         case 6:
             let userVC = UserVC(nibName: "UserVC", bundle: nil)
             self.navigationController?.pushViewController(userVC, animated: true)

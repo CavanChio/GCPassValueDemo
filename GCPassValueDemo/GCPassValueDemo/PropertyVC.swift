@@ -9,13 +9,18 @@
 import UIKit
 
 class PropertyVC: UIViewController {
+    @IBOutlet weak var showLabel: UILabel?
 
+    var text: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.showLabel?.text = self.text
     }
 
+    @IBAction func nextPage(_ sender: UIButton) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

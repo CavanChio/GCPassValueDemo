@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertyVC" customModule="GCPassValueDemo" customModuleProvider="target">
             <connections>
+                <outlet property="showLabel" destination="e2R-Bv-Lef" id="G0O-vI-Tnu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,38 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2R-Bv-Lef">
+                    <rect key="frame" x="16" y="119" width="343" height="52"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="Bku-E8-0r2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py9-5w-dPg">
+                    <rect key="frame" x="141" y="318" width="92" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="qJZ-yO-C9q"/>
+                    </constraints>
+                    <state key="normal" title="跳转到下一页"/>
+                    <connections>
+                        <action selector="nextPage:" destination="-1" eventType="touchUpInside" id="LIf-LH-cwH"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.66666666669999997" green="0.2057462971" blue="0.76755022319999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="e2R-Bv-Lef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="4Qh-u7-Byf"/>
+                <constraint firstItem="py9-5w-dPg" firstAttribute="top" secondItem="e2R-Bv-Lef" secondAttribute="bottom" constant="147" id="AbA-Fu-9B1"/>
+                <constraint firstAttribute="trailing" secondItem="e2R-Bv-Lef" secondAttribute="trailing" constant="16" id="W0a-uE-0k9"/>
+                <constraint firstItem="e2R-Bv-Lef" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="119" id="W6j-9n-R0N"/>
+                <constraint firstAttribute="trailing" secondItem="py9-5w-dPg" secondAttribute="trailing" constant="142" id="d6Q-Xq-gDM"/>
+                <constraint firstItem="py9-5w-dPg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="141" id="dho-8Q-qL0"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

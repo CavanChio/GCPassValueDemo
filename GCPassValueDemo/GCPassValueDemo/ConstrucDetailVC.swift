@@ -15,12 +15,12 @@ class ConstrucDetailVC: UIViewController {
     //自定义构造器
     //析构器
     deinit {
-        print(#function)
+//        print(#function)
     }
     //自定义构造器
     init(text: String) {
         super.init(nibName: nil, bundle: nil)
-        print(#function)
+//        print(#function)
         print(text)
         self.text = text
         //指定构造器

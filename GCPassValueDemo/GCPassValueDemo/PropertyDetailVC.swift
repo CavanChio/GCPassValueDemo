@@ -9,13 +9,19 @@
 import UIKit
 
 class PropertyDetailVC: UIViewController {
-
+        
+    @IBOutlet weak var myTF: UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func lastPage(_ sender: UIButton) {
+        let propertyVC = PropertyVC(nibName: "PropertyVC", bundle: nil)
+        propertyVC.text = self.myTF?.text
+        self.navigationController?.pushViewController(propertyVC, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
