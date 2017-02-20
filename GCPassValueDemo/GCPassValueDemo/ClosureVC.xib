@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClosureVC" customModule="GCPassValueDemo" customModuleProvider="target">
             <connections>
+                <outlet property="showLabel" destination="FoW-6J-Kip" id="Obb-Ry-HJE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="showLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoW-6J-Kip">
+                    <rect key="frame" x="16" y="118" width="348" height="69"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="69" id="GSK-zC-7Iz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aam-0l-vLZ">
+                    <rect key="frame" x="135" y="360" width="104" height="30"/>
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.2057462971" blue="0.37980431920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dTL-em-7Kn"/>
+                    </constraints>
+                    <state key="normal" title="Skip Next Page">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="skipButton:" destination="-1" eventType="touchUpInside" id="yhO-dt-cCq"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.66666666669999997" green="0.2057462971" blue="0.76755022319999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aam-0l-vLZ" secondAttribute="trailing" constant="136" id="BvJ-kP-W9G"/>
+                <constraint firstItem="aam-0l-vLZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="135" id="GcJ-Yt-vuJ"/>
+                <constraint firstItem="FoW-6J-Kip" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="118" id="Ij8-fv-z6M"/>
+                <constraint firstItem="FoW-6J-Kip" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="daZ-yM-GQW"/>
+                <constraint firstItem="aam-0l-vLZ" firstAttribute="top" secondItem="FoW-6J-Kip" secondAttribute="bottom" constant="173" id="f7H-JI-Tka"/>
+                <constraint firstAttribute="trailing" secondItem="FoW-6J-Kip" secondAttribute="trailing" constant="11" id="lU9-iW-8g4"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

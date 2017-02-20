@@ -9,13 +9,21 @@
 import UIKit
 
 class ClosureVC: UIViewController {
-
+    @IBOutlet weak var showLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func skipButton(_ sender: UIButton) {
+        let closureVC = ClosureDetailVC()
+        closureVC.callBack{(value: String?) -> Void in
+            self.showLabel.text = value
+        }
+        self.navigationController?.pushViewController(closureVC, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
